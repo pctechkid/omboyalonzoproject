@@ -1,0 +1,767 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+{% block headerinclude %}
+<head>
+	<meta charset="utf-8">
+	<meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+	<title>Doctor's Appointment</title>
+	<link rel="stylesheet" type="text/css" href="{% static 'assets/css/style.css' %}">
+
+	<meta content="" name="description">
+	<meta content="" name="keywords">
+
+	<!-- Favicons -->
+	<link href="{% static 'assets/img/favicon.png' %}" rel="icon">
+	<link href="{% static 'assets/img/apple-touch-icon.png' %}" rel="apple-touch-icon">
+
+	<!-- Google Fonts -->
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+	<!-- Vendor CSS Files -->
+	<link href="{% static 'assets/vendor/animate.css/animate.min.css' %}" rel="stylesheet">
+	<link href="{% static 'assets/vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+	<link href="{% static 'assets/vendor/bootstrap-icons/bootstrap-icons.css'%}" rel="stylesheet">
+	<link href="{% static 'assets/vendor/boxicons/css/boxicons.min.css' %}" rel="stylesheet">
+	<link href="{% static 'assets/vendor/fontawesome-free/css/all.min.css' %}" rel="stylesheet">
+	<link href="{% static 'assets/vendor/glightbox/css/glightbox.min.css' %}" rel="stylesheet">
+	<link href="{% static 'assets/vendor/remixicon/remixicon.css' %}" rel="stylesheet">
+	<link href="{% static 'assets/vendor/swiper/swiper-bundle.min.css' %}" rel="stylesheet">
+
+	<!-- Template Main CSS File -->
+	<link href="{% static 'assets/css/style.css" rel="stylesheet' %}">
+	<style>
+		a{
+		  text-decoration: none;
+		  color: inherit;
+		}
+	</style>
+
+	<!-- =======================================================
+	* Template Name: Medilab - v4.3.0
+	* Template URL: https://bootstrapmade.com/medilab-free-medical-bootstrap-theme/
+	* Author: BootstrapMade.com
+	* License: https://bootstrapmade.com/license/
+	======================================================== -->
+</head>
+{% endblock headerinclude %}
+
+<body>
+
+	<!-- ======= Header ======= -->
+	<header id="header">
+		<div class="container d-flex align-items-center">
+
+			<h1 class="logo me-auto"><a href="main">Medilab</a></h1>
+			<!-- Uncomment below if you prefer to use an image logo -->
+			<!-- <a href="index.html" class="logo me-auto"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+
+			<nav id="navbar" class="navbar order-last order-lg-0">
+				<ul>
+					<li><a class="nav-link scrollto active" href="#main">Home</a></li>
+					<li><a class="nav-link scrollto" href="main#about">About</a></li>
+					<li><a class="nav-link scrollto" href="main#services">Services</a></li>
+					<li><a class="nav-link scrollto" href="main#departments">Departments</a></li>
+					<li><a class="nav-link scrollto" href="main#doctors">Doctors</a></li>
+					<li><a class="nav-link scrollto" href="main#contact">Contact</a></li>
+					<li><a class="nav-link scrollto" href="main#members">Sign In</a></li>
+				</ul>
+				<i class="bi bi-list mobile-nav-toggle"></i>
+			</nav><!-- .navbar -->
+
+			<a href="#appointment" class="appointment-btn scrollto"><span class="d-none d-md-inline"></span> Appointment</a>
+			<a href="dashboard" class="appointment-btn scrollto"><span class="d-none d-md-inline"></span> Dashboard</a>
+
+		</div>
+	</header><!-- End Header -->
+
+	<!-- ======= Hero Section ======= -->
+	<section id="hero" class="d-flex align-items-center">
+		<div class="container">
+			<h1>Welcome to Doctor's</h1>
+		<h1>Appointment</h1>
+			<h2>With few taps or clicks, save your time!</h2>
+			<a href="#about" class="btn-get-started scrollto">Get Started</a>
+		</div>
+	</section><!-- End Hero -->
+
+	<main id="main">
+
+		<!-- ======= Why Us Section ======= -->
+		<section id="why-us" class="why-us">
+			<div class="container">
+
+				<div class="row">
+					<div class="col-lg-4 d-flex align-items-stretch">
+						<div class="content">
+							<h3>Why Online?</h3>
+							<p>
+								An online doctor appointment booking system can prove to be a boon to doctors and patients alike. For those among us who have seen the waiting room of busy doctors, it will draw memories of patients and their attendants crowding around the receptionist. It was not necessarily first-in and first-out.
+							</p>
+							<div class="text-center">
+								<a href="#" class="more-btn">Learn More <i class="bx bx-chevron-right"></i></a>
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-8 d-flex align-items-stretch">
+						<div class="icon-boxes d-flex flex-column justify-content-center">
+							<div class="row">
+								<div class="col-xl-4 d-flex align-items-stretch">
+									<div class="icon-box mt-4 mt-xl-0">
+										<i class="bx bx-receipt"></i>
+										<h4>Book Anytime</h4>
+										<p>Choose which time you like at your own comfort.</p>
+									</div>
+								</div>
+								<div class="col-xl-4 d-flex align-items-stretch">
+									<div class="icon-box mt-4 mt-xl-0">
+										<i class="bx bx-cube-alt"></i>
+										<h4>Anywhere!</h4>
+										<p>Available on the internet, allows patients to book an appointment from the comfort of their homes.</p>
+									</div>
+								</div>
+								<div class="col-xl-4 d-flex align-items-stretch">
+									<div class="icon-box mt-4 mt-xl-0">
+										<i class="bx bx-images"></i>
+										<h4>Making employees and staff more productive</h4>
+										<p>Your staff have their time released from handling phone calls from patients desiring appointments.</p>
+									</div>
+								</div>
+							</div>
+						</div><!-- End .content-->
+					</div>
+				</div>
+
+			</div>
+		</section><!-- End Why Us Section -->
+
+		<!-- ======= About Section ======= -->
+		<section id="about" class="about">
+			<div class="container-fluid">
+
+				<div class="row">
+					<div class="col-xl-5 col-lg-6 video-box d-flex justify-content-center align-items-stretch position-relative">
+						<a href="https://www.youtube.com/watch?v=jDDaplaOz7Q" class="glightbox play-btn mb-4"></a>
+					</div>
+
+					<div class="col-xl-7 col-lg-6 icon-boxes d-flex flex-column align-items-stretch justify-content-center py-5 px-lg-5">
+						<h3>About Us</h3>
+						<p>We believe that everyone should be able to take care of their health and wellness.</p>
+
+						<div class="icon-box">
+							<div class="icon"><i class="bx bx-fingerprint"></i></div>
+							<h4 class="title"><a href="">Our Mission</a></h4>
+							<p class="description">Empowering the people with value-added health options.</p>
+						</div>
+
+						<div class="icon-box">
+							<div class="icon"><i class="bx bx-gift"></i></div>
+							<h4 class="title"><a href="">Our Vision</a></h4>
+							<p class="description">To be the country’s top full-service, fully-automated partner in providing quality patient care.</p>
+						</div>
+
+					</div>
+				</div>
+
+			</div>
+		</section><!-- End About Section -->
+
+		
+
+		<!-- ======= Services Section ======= -->
+		<section id="services" class="services">
+			<div class="container">
+
+				<div class="section-title">
+					<h2>Services</h2>
+				</div>
+
+				<div class="row">
+					<div class="col-lg-4 col-md-6 d-flex align-items-stretch">
+						<div class="icon-box">
+							<div class="icon"><i class="fas fa-heartbeat"></i></div>
+							<h4><a href="">Primary Care</a></h4>
+							<p>Comprehensive outpatient healthcare products and services</p>
+						</div>
+					</div>
+
+					<div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-md-0">
+						<div class="icon-box">
+							<div class="icon"><i class="fas fa-pills"></i></div>
+							<h4><a href="">Online Consultation</a></h4>
+							<p>Get your hassle-free medical consultation here using our appointpoint web application</p>
+						</div>
+					</div>
+							 
+					<div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-md-0">
+						<div class="icon-box">
+							<div class="icon"><i class="fas fa-wheelchair"></i></div>
+							<h4><a href="">Rehabilitation Medicine</a></h4>
+							<p>Aims to enhance and restore functional ability and quality of life to those with physical impairments or disabilities.</p>
+						</div>
+					</div>
+
+				</div>
+
+			</div>
+		</section><!-- End Services Section -->
+	<section id="members" class="services">
+			<div class="container">
+
+				<div class="section-title">
+					<h2>Member's Area</h2>
+				</div>
+
+				<div class="row section-title">
+		 <p>
+		<button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapsSignIn" aria-expanded="false" aria-controls="collapseExample">
+		Sign-In
+		</button>
+		<button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseRegister" aria-expanded="false" aria-controls="collapseExample">
+		Register
+		</button>
+	</p>
+<div class="collapse" id="collapsSignIn">
+	<div class="card card-body">
+		<section id="members" class="appointment section-bg">
+			<div class="container">
+
+				<div class="section-title">
+					<h2>Doctor's Login</h2>
+				</div>
+
+				<form action="forms/appointment.php" method="post" role="form" class="php-email-form">
+					<div class="row">
+						<div class="col-center">
+							<input type="text" name="name" class="form-control" id="name" placeholder="Name" data-rule="minlen:4" data-msg="Please enter at least 4 chars">
+							<div class="validate"></div>
+						</div>
+						
+						
+					</div>
+					<div class="row">
+						<div class="col-center form-group mt-3">
+							<input type="password" name="date" class="form-control" id="date" placeholder="Password" data-rule="minlen:4" data-msg="Please enter at least 6 chars">
+							<div class="validate"></div>
+						</div>
+					</div>
+			<br>
+					<div class="text-center col-md"><button type="submit">Sign-In</button></div>
+				</form>
+
+			</div>
+		</section>
+	</div>
+</div>
+<div class="collapse" id="collapseRegister">
+	<div class="card card-body">
+		
+{% block content %}
+		<section id="members" class="appointment section-bg">
+			<div class="container">
+
+				<div class="section-title">
+					<h2>Register</h2>
+				</div>
+
+				<form action="" method="POST" autocomplete="off"  >
+					{% csrf_token %}
+					<div class="row">
+						<div class="col-md-4 form-group">
+							<input type="text" name="Name" id="name" class="form-control" placeholder="Doctor's Name" data-rule="minlen:4" data-msg="Please enter at least 4 chars">
+							
+						</div>
+						<div class="col-md-4 form-group mt-3 mt-md-0">
+							<select name="Gender" id="gender" class="form-select">
+                <option value="">Gender</option>
+                <option value="Male">Male</option>
+                <option value="Female">Female</option>
+              </select>
+							
+						</div>
+			<div class="col-md-4 form-group mt-3 mt-md-0">
+							<input type="text" name="Age" id="age" class="form-control" placeholder="Age" data-rule="minlen:2" data-msg="Please enter at least 4 chars">
+							
+						</div>
+						<div class="col-md-4 form-group mt-3 mt-md-0">
+							<input type="password" name="Password" id="password" class="form-control"placeholder="Password" data-rule="minlen:4" data-msg="Please enter at least 4 chars">
+							
+						</div>
+			<!--<div class="col-md-4 form-group mt-3 mt-md-0">
+							<select name="department" id="department" class="form-select">
+								<option value="">Select Department</option>
+								<option value="Department 1">Department 1</option>
+								<option value="Department 2">Department 2</option>
+								<option value="Department 3">Department 3</option>
+							</select>
+							<div class="validate"></div>
+						</div>
+			
+					</div>-->
+					
+					<br>
+					<div class="text-center"><button class="btn btn-primary"  href="{% url 'myapp1:my_index_view' %}" type="submit" name = 'btnSignUp'>Sign-Up</button></div>
+				</form>
+
+			</div>
+		</section>
+	</div>
+	</div>
+
+	</div>
+
+			</div>
+		</section>
+	
+
+	
+		<!-- ======= Appointment Section ======= -->
+		<section  id="appointment" class="appointment section-bg">
+			<div class="container">
+
+				<div class="section-title">
+					<h2>Make an Appointment</h2>
+					<p>From primary care to online consultation, we are continuously growing our business to bring you just what you need to take care of your health.</p>
+				</div>
+
+				<form id = "form1" action="" method="POST" autocomplete="off" enctype="multipart/form-data">
+					{% csrf_token %}
+					<div class="row">
+						<div class="col-md-4 form-group">
+							<input type="text" name="Name" id="namee" class="form-control" placeholder="Your Name" data-rule="minlen:4" data-msg="Please enter at least 4 chars">
+							<div class="validate"></div>
+						</div>
+						<div class="col-md-4 form-group mt-3 mt-md-0">
+							<input type="text" class="form-control" name="Email" id="emaill" placeholder="Your Email" data-rule="email" data-msg="Please enter a valid email">
+							<div class="validate"></div>
+						</div>
+						<div class="col-md-4 form-group mt-3 mt-md-0">
+							<input type="text" class="form-control" name="Phone" id="phonee" placeholder="Your Phone" data-rule="minlen:4" data-msg="Please enter at least 4 chars">
+							<div class="validate"></div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-4 form-group mt-3">
+							<input type="date" name="Appointment_Date"  id="datee" class="form-control" placeholder="Appointment Date" data-rule="minlen:4" data-msg="Please enter at least 4 chars">
+							<div class="validate"></div>
+						</div>
+
+						<!--<div class="col-md-4 form-group mt-3">
+							<select name="department" id="department" class="form-select">
+								<option value="">Select Department</option>
+								<option value="Department 1">Department 1</option>
+								<option value="Department 2">Department 2</option>
+								<option value="Department 3">Department 3</option>
+							</select>
+							<div class="validate"></div>
+						</div>-->
+
+						<div class="col-md-4 form-group mt-3">
+							<select type="number" id = "doctor_id" name ="Doctor" class="form-select">								
+									<option selected disabled="true">-- Select Doctor ---</option>
+									{% for d in doctors %}									
+										<option value="{{d.Doctor_ID}}">{{d.Name}}</option>
+									{% endfor %}
+							</select>
+							<div class="validate"></div>
+						</div>
+					</div>
+
+					<!--<div class="form-group mt-3">
+						<textarea type="text" class="form-control" name="message" rows="5" placeholder="Message (Optional)"></textarea>
+						<div class="validate"></div>
+					</div>
+					<div class="mb-3">..>
+						<div class="loading">Loading</div>
+						<div class="error-message"></div>
+						<div class="sent-message">Your appointment request has been sent successfully. Thank you!</div>
+					</div>-->
+					<br>
+					<div class="text-center"><button class="btn btn-primary"  href="{% url 'myapp1:after_appointment_view' %}" type="submit" name = 'btnMakeAppointment'>Make an Appointment</button></div>
+				</form>
+
+
+			</div>
+		</section>
+{% endblock content %}
+<!-- End Appointment Section -->
+
+
+		<!-- ======= Departments Section ======= -->
+		<section id="departments" class="departments">
+			<div class="container">
+
+				<div class="section-title">
+					<h2>Departments</h2>
+					<p>Services we widely offered and departments we have.</p>
+				</div>
+
+				<div class="row">
+					<div class="col-lg-3">
+						<ul class="nav nav-tabs flex-column">
+							<li class="nav-item">
+								<a class="nav-link active show" data-bs-toggle="tab" href="#tab-1">Cardiology</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" data-bs-toggle="tab" href="#tab-2">Neurology</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" data-bs-toggle="tab" href="#tab-3">Hepatology</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" data-bs-toggle="tab" href="#tab-4">Pediatrics</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" data-bs-toggle="tab" href="#tab-5">Eye Care</a>
+							</li>
+						</ul>
+					</div>
+					<div class="col-lg-9 mt-4 mt-lg-0">
+						<div class="tab-content">
+							<div class="tab-pane active show" id="tab-1">
+								<div class="row">
+									<div class="col-lg-8 details order-2 order-lg-1">
+										<h3>Cardiology</h3>
+										<p class="fst-italic">Deals with the diagnosis and treatment of such conditions as congenital heart defects, coronary artery disease, electrophysiology, heart failure and valvular heart disease.</p>
+									</div>
+									<div class="col-lg-4 text-center order-1 order-lg-2">
+										<img src="{% static 'assets/img/departments-1.jpg' %}" alt="" class="img-fluid">
+									</div>
+								</div>
+							</div>
+							<div class="tab-pane" id="tab-2">
+								<div class="row">
+									<div class="col-lg-8 details order-2 order-lg-1">
+										<h3>Neurology</h3>
+										<p class="fst-italic">Study and treatment of disorders of the nervous system.</p>
+					<p>The nervous system is a complex, sophisticated system that regulates and coordinates body activities. It has two major divisions: Central nervous system: the brain and spinal cord.</p>
+									</div>
+									<div class="col-lg-4 text-center order-1 order-lg-2">
+										<img src="{% static 'assets/img/departments-2.jpg' %}" alt="" class="img-fluid">
+									</div>
+								</div>
+							</div>
+							<div class="tab-pane" id="tab-3">
+								<div class="row">
+									<div class="col-lg-8 details order-2 order-lg-1">
+										<h3>Hepatology</h3>
+										<p class="fst-italic">Focuses on diseases of the liver as well as related conditions.</p>
+										<p>Involves the diagnosis and treatment of hepatic diseases, which include issues that affect your: liver. gallbladder. pancreas.</p>
+									</div>
+									<div class="col-lg-4 text-center order-1 order-lg-2">
+										<img src="{% static 'assets/img/departments-3.jpg' %}" alt="" class="img-fluid">
+									</div>
+								</div>
+							</div>
+							<div class="tab-pane" id="tab-4">
+								<div class="row">
+									<div class="col-lg-8 details order-2 order-lg-1">
+										<h3>Pediatrics</h3>
+										<p class="fst-italic">Involves the medical care of infants, children, and adolescents.</p>
+									</div>
+									<div class="col-lg-4 text-center order-1 order-lg-2">
+										<img src="{% static 'assets/img/departments-4.jpg' %}" alt="" class="img-fluid">
+									</div>
+								</div>
+							</div>
+							<div class="tab-pane" id="tab-5">
+								<div class="row">
+									<div class="col-lg-8 details order-2 order-lg-1">
+										<h3>Eye Care</h3>
+										<p class="fst-italic">Diagnose, treat and monitor eye conditions with medication and surgery. </p>
+										<p>Provide the following services: Comprehensive eye examinations. Prescription and fitting of glasses and contact lenses.</p>
+									</div>
+									<div class="col-lg-4 text-center order-1 order-lg-2">
+										<img src="{% static 'assets/img/departments-5.jpg' %}" alt="" class="img-fluid">
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+			</div>
+		</section><!-- End Departments Section -->
+
+		<!-- ======= Doctors Section ======= -->
+		<section id="doctors" class="doctors">
+			<div class="container">
+
+				<div class="section-title">
+					<h2>Doctors</h2>
+					<p>We got the best doctor in the field to tend to your medical needs!</p>
+				</div>
+
+				<div class="row">
+
+					<div class="col-lg-6">
+						<div class="member d-flex align-items-start">
+							<div class="pic"><img src="{% static 'assets/img/doctors/doctors-1.jpg' %}" class="img-fluid" alt=""></div>
+							<div class="member-info">
+								<h4>Walter White</h4>
+								<span>Chief Medical Officer</span>
+								<p>An expert in the medical field.</p>
+								<div class="social">
+									<a href=""><i class="ri-twitter-fill"></i></a>
+									<a href=""><i class="ri-facebook-fill"></i></a>
+									<a href=""><i class="ri-instagram-fill"></i></a>
+									<a href=""> <i class="ri-linkedin-box-fill"></i> </a>
+								</div>
+							</div>
+						</div>
+					</div>          
+		 
+
+				</div>
+
+			</div>
+		</section><!-- End Doctors Section -->
+
+		
+		
+
+		<!-- ======= Testimonials Section ======= -->
+		<section id="testimonials" class="testimonials">
+			<div class="container">
+
+				<div class="testimonials-slider swiper-container" data-aos="fade-up" data-aos-delay="100">
+					<div class="swiper-wrapper">
+
+						<div class="swiper-slide">
+							<div class="testimonial-wrap">
+								<div class="testimonial-item">
+									<img src="{% static 'assets/img/testimonials/testimonials-1.png' %}" class="testimonial-img" alt="">
+									<h3>Ronnel Omboy</h3>
+									<h4>BSIT-3</h4>
+									<p>
+										<i class="bx bxs-quote-alt-left quote-icon-left"></i>
+										Thank you so much for the difference you make in the lives of your patients! Your kindness, sincere caring, and concern make everything better and are a great encouragement.
+										<i class="bx bxs-quote-alt-right quote-icon-right"></i>
+									</p>
+								</div>
+							</div>
+						</div><!-- End testimonial item -->
+
+						<div class="swiper-slide">
+							<div class="testimonial-wrap">
+								<div class="testimonial-item">
+									<img src="{% static 'assets/img/testimonials/testimonials-6.jpg' %}" class="testimonial-img" alt="">
+									<h3>Psalm Alonzo</h3>
+									<h4>BSIT-3</h4>
+									<p>
+										<i class="bx bxs-quote-alt-left quote-icon-left"></i>
+										Thank you so much for providing the assistance and passion for the patients. Your well being is fortunate to all of us. 
+										<i class="bx bxs-quote-alt-right quote-icon-right"></i>
+									</p>
+								</div>
+							</div>
+						</div><!-- End testimonial item -->
+					 
+					</div>
+					<div class="swiper-pagination"></div>
+				</div>
+
+			</div>
+		</section><!-- End Testimonials Section -->
+
+		<!-- ======= Gallery Section ======= -->
+		<section id="gallery" class="gallery">
+			<div class="container">
+
+				<div class="section-title">
+					<h2>Gallery</h2>
+					<p>Clinic branches are 100% compliant to the minimum public health standards set by the government and that each integrates their contact tracing process.</p>
+				</div>
+			</div>
+
+			<div class="container-fluid">
+				<div class="row no-gutters">
+
+					<div class="col-lg-3 col-md-4">
+						<div class="gallery-item">
+							<a href="{% static 'assets/img/gallery/gallery-1.jpg' %}" class="galelry-lightbox">
+								<img src="{% static 'assets/img/gallery/gallery-1.jpg' %}" alt="" class="img-fluid">
+							</a>
+						</div>
+					</div>
+
+					<div class="col-lg-3 col-md-4">
+						<div class="gallery-item">
+							<a href="{% static 'assets/img/gallery/gallery-2.jpg' %}" class="galelry-lightbox">
+								<img src="{% static 'assets/img/gallery/gallery-2.jpg' %}" alt="" class="img-fluid">
+							</a>
+						</div>
+					</div>
+
+					<div class="col-lg-3 col-md-4">
+						<div class="gallery-item">
+							<a href="{% static 'assets/img/gallery/gallery-3.jpg' %}" class="galelry-lightbox">
+								<img src="{% static 'assets/img/gallery/gallery-3.jpg' %}" alt="" class="img-fluid">
+							</a>
+						</div>
+					</div>
+
+					<div class="col-lg-3 col-md-4">
+						<div class="gallery-item">
+							<a href="{% static 'assets/img/gallery/gallery-4.jpg' %}" class="galelry-lightbox">
+								<img src="{% static 'assets/img/gallery/gallery-4.jpg' %}" alt="" class="img-fluid">
+							</a>
+						</div>
+					</div>
+
+					<div class="col-lg-3 col-md-4">
+						<div class="gallery-item">
+							<a href="{% static 'assets/img/gallery/gallery-5.jpg' %}" class="galelry-lightbox">
+								<img src="{% static 'assets/img/gallery/gallery-5.jpg' %}" alt="" class="img-fluid">
+							</a>
+						</div>
+					</div>
+
+					<div class="col-lg-3 col-md-4">
+						<div class="gallery-item">
+							<a href="{% static 'assets/img/gallery/gallery-6.jpg' %}" class="galelry-lightbox">
+								<img src="{% static 'assets/img/gallery/gallery-6.jpg' %}" alt="" class="img-fluid">
+							</a>
+						</div>
+					</div>
+
+					<div class="col-lg-3 col-md-4">
+						<div class="gallery-item">
+							<a href="{% static 'assets/img/gallery/gallery-7.jpg' %}" class="galelry-lightbox">
+								<img src="{% static 'assets/img/gallery/gallery-7.jpg' %}" alt="" class="img-fluid">
+							</a>
+						</div>
+					</div>
+
+					<div class="col-lg-3 col-md-4">
+						<div class="gallery-item">
+							<a href="{% static 'assets/img/gallery/gallery-8.jpg' %}" class="galelry-lightbox">
+								<img src="{% static 'assets/img/gallery/gallery-8.jpg' %}" alt="" class="img-fluid">
+							</a>
+						</div>
+					</div>
+
+				</div>
+
+			</div>
+		</section><!-- End Gallery Section -->
+
+		<!-- ======= Contact Section ======= -->
+		<section id="contact" class="contact">
+			<div class="container">
+
+				<div class="section-title">
+					<h2>Contact</h2>
+					<p>If you have a question, need help, or need to report a problem, you may contact us through the following:</p>
+				</div>
+			</div>
+
+			
+
+			<div class="container">
+				<div class="row mt-5">
+
+					<div class="col-lg-4">
+						<div class="info">
+							<div class="address">
+								<i class="bi bi-geo-alt"></i>
+								<h4>Location:</h4>
+								<p>Natalio B. Bacalso Ave, Cebu City, 6000 Cebu</p>
+							</div>
+
+							<div class="email">
+								<i class="bi bi-envelope"></i>
+								<h4>Email:</h4>
+								<p>info@example.com</p>
+							</div>
+
+							<div class="phone">
+								<i class="bi bi-phone"></i>
+								<h4>Call:</h4>
+								<p>+1 5589 55488 55s</p>
+							</div>
+
+						</div>
+
+					</div>
+
+					<div class="col-lg-8 mt-5 mt-lg-0">
+
+						<form action="forms/contact.php" method="post" role="form" class="php-email-form">
+							<div class="row">
+								<div class="col-md-6 form-group">
+									<input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required>
+								</div>
+								<div class="col-md-6 form-group mt-3 mt-md-0">
+									<input type="email" class="form-control" name="email" id="email" placeholder="Your Email" required>
+								</div>
+							</div>
+							<div class="form-group mt-3">
+								<input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" required>
+							</div>
+							<div class="form-group mt-3">
+								<textarea class="form-control" name="message" rows="5" placeholder="Message" required></textarea>
+							</div>
+							<div class="my-3">
+								<div class="loading">Loading</div>
+								<div class="error-message"></div>
+								<div class="sent-message">Your message has been sent. Thank you!</div>
+							</div>
+							<div class="text-center"><button type="submit">Send Message</button></div>
+						</form>
+
+					</div>
+
+				</div>
+
+			</div>
+		</section><!-- End Contact Section -->
+
+	</main><!-- End #main -->
+{% block footerinclude %}
+	<!-- ======= Footer ======= -->
+	<footer id="footer">
+
+		<div class="container d-md-flex py-4">
+
+			<div class="me-md-auto text-center text-md-start">
+				
+				<div class="credits">
+					<!-- All the links in the footer should remain intact. -->
+					<!-- You can delete the links only if you purchased the pro version. -->
+					<!-- Licensing information: https://bootstrapmade.com/license/ -->
+					<!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/medilab-free-medical-bootstrap-theme/ -->
+					Designed by <a href="#">Alonzo, Psalm XXIII & Omboy, Ronnel C.</a>
+				</div>
+			</div>
+			<div class="social-links text-center text-md-right pt-3 pt-md-0">
+				<a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
+				<a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
+				<a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
+				<a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>
+				<a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+			</div>
+		</div>
+	</footer><!-- End Footer -->
+	{% endblock footerinclude %}
+
+	<div id="preloader"></div>
+	<a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+	<!-- Vendor JS Files -->
+	<script src="{% static 'assets/vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+	<script src="{% static 'assets/vendor/glightbox/js/glightbox.min.js' %}"></script>
+	<script src="{% static 'assets/vendor/php-email-form/validate.js' %}"></script>
+	<script src="{% static 'assets/vendor/purecounter/purecounter.js' %}"></script>
+	<script src="{% static 'assets/vendor/swiper/swiper-bundle.min.js' %}"></script>
+
+	<!-- Template Main JS File -->
+	<script src="{% static 'assets/js/main.js' %}"></script>
+	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+</body>
+
+</html>

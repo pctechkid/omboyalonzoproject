@@ -1,7 +1,6 @@
 from django.db import models
 from datetime import datetime
 from django.utils import timezone
-from phone_field import PhoneField
 
 # Create your models here.
 
@@ -16,10 +15,10 @@ class Doctors(models.Model):
 
 class Patient(models.Model):
 	Patient_ID = models.AutoField(primary_key=True)
-	Name = models.CharField(max_length = )
+	Name = models.CharField(max_length = 50)
 	Email = models.CharField(max_length = 50)
 	Appointment_Date = models.DateField()
-	Phone = PhoneField(blank=True, help_text='Contact phone number')
+	Phone = models.CharField(max_length = 50)
 	Doctor = models.ForeignKey(Doctors, on_delete = models.CASCADE)
 
 	

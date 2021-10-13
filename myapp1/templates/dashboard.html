@@ -186,23 +186,23 @@
                           <input type="hidden" name="patient-id" value = {{Patient.Patient_ID}}>
                           <form>
                                   <div class = "form-group">
-                                    <label>Patient ID</label>
+                                    <label><b>Patient ID</b></label>
                                     <input type="text" class="form-control"  placeholder="Patient ID" name="patient-id" value ={{Patient.Patient_ID}} readonly>
                                   </div>
                                   <div class = "form-group">
-                                    <label>Name</label>
+                                    <label><b>Name</b></label>
                                     <input type="text" class="form-control"  placeholder="Patient Name" name="patient-name" value = "{{Patient.Name}}">
                                   </div>
                                   <div class = "form-group">
-                                    <label>Appointment Date</label>
+                                    <label><b>Appointment Date</b></label>
                                     <input type="date" class="form-control" placeholder="Appointment Date"  name="patient-appointmentdate" value = {{Patient.Appointment_Date|date:'Y-m-d'}}>
                                   </div>
                                   <div class = "form-group">
-                                    <label>Phone</label>
+                                    <label><b>Phone</b></label>
                                     <input type="text" class="form-control"  placeholder="Phone"  name="patient-phone" value ={{Patient.Phone}}>
                                   </div>
                                   <div class = "form-group">
-                                    <label>Doctor</label>
+                                    <label><b>Doctor</b></label>
                                       <select class="form-select"  name="patient-doctor" aria-label="Default select example">
                                        {% for d in doctors %}                 
                                           <option value="{{d.Doctor_ID}}">{{d.Name}}</option>
@@ -270,7 +270,7 @@
                 <td>{{Doctor.Name}}</td>
                 <td>{{Doctor.Gender}}</td>
                 <td>{{Doctor.Age}}</td>
-                <td>{{Doctor.Password}}</td>
+                <td><input type="password" value="{{Doctor.Password}}" id="{{Doctor.Password}}" readonly> <span toggle="#{{Doctor.Password}}" class="fa fa-fw fa-eye field-icon toggle-password"></span></td>
                 <td>
                   <a type="button" class="square_btn_up1" href="#" data-toggle="modal" data-target="#updateDoctorModal-{{Doctor.Doctor_ID}}"><i class="far fa-edit"></i></a>
                   <a type="button" class="square_btn_del1" href="#" data-toggle="modal" data-target="#deleteDoctorModal-{{Doctor.Doctor_ID}}"><i class="far fa-trash-alt"></i></a>
@@ -292,27 +292,27 @@
                           <input type="hidden" name="doctor-id" value = {{Doctor.Doctor_ID}}>
                           <form>
                                   <div class = "form-group">
-                                    <label>Doctor ID</label>
+                                    <label><b>Doctor ID</b></label>
                                     <input type="text" class="form-control"  placeholder="Doctor ID" name="doctor-id" value ={{Doctor.Doctor_ID}} readonly>
                                   </div>
                                   <div class = "form-group">
-                                    <label>Name</label>
+                                    <label><b>Name</b></label>
                                     <input type="text" class="form-control"  placeholder="Doctor Name" name="doctor-name" value ="{{Doctor.Name}}">
                                   </div>
                                   <div class = "form-group">
-                                    <label>Gender</label>
+                                    <label><b>Gender</b></label>
                                       <select class="form-select"  name="doctor-gender" aria-label="Default select example">
                                            <option selected="{{d.Gender}}" >Male</option>
                                           <option>Female</option>
                                       </select>
                                   </div>
                                   <div class = "form-group">
-                                    <label>Age</label>
+                                    <label><b>Age</b></label>
                                     <input type="text" class="form-control"  placeholder="Age"  name="doctor-age" value ={{Doctor.Age}}>
                                   </div>
                                   <div class = "form-group">
-                                    <label>Password</label>
-                                    <input type="text" class="form-control"  placeholder="Password" name="doctor-password" value ={{Doctor.Password}}>
+                                    <label><b>Password</b></label>
+                                    <input type="text" class="form-control" placeholder="Password" name="doctor-password" value ={{Doctor.Password}}>
                                   </div>
                               </div>
                         <div class="modal-footer">  
@@ -352,6 +352,17 @@
             </tbody>
 
         </table>
+        <script>
+        $(".toggle-password").click(function() {
+        $(this).toggleClass("fa-eye fa-eye-slash");
+          var input = $($(this).attr("toggle"));
+          if (input.attr("type") == "password") {
+            input.attr("type", "text");
+          } else {
+            input.attr("type", "password");
+          }
+        });
+        </script>
             
     {% endblock content %}
 

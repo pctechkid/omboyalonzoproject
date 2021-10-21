@@ -8,6 +8,10 @@ from django.http import Http404
 
 # Create your views here.
 
+class Admin(View):
+	def get(self, request):
+		return render(request, 'admin_login.html')
+
 class root(View):
 	def get(self, request):
 		return redirect('myapp1:my_index_view')

@@ -9,5 +9,6 @@ urlpatterns = [
     path('main', views.MyIndexView.as_view(), name="my_index_view"),
     path('dashboard', views.Dashboard.as_view(), name="dashboard"),
     path('after', views.After.as_view(), name="after_appointment_view"),
+    path('admin-login', views.Admin.as_view(), name="admin_view"),
 
 ]

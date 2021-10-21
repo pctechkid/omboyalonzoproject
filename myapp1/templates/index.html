@@ -29,6 +29,15 @@
 	<link href="{% static 'assets/vendor/remixicon/remixicon.css' %}" rel="stylesheet">
 	<link href="{% static 'assets/vendor/swiper/swiper-bundle.min.css' %}" rel="stylesheet">
 
+
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha512-SfTiTlX6kk+qitfevl/7LibUOeJWlt9rbyDn92a1DqWOw9vWG2MFoays0sgObmWazO5BQPiFucnnEAjpAB+/Sw==" crossorigin="anonymous" />
+	<link href="{% static 'assets/css/bootstrap-3.4.1.min.css" rel="stylesheet' %}">
+	<script src="{% static 'assets/js/jquery-3.3.1.min.js' %}"></script>
+	<link href="{% static 'assets/css/main.css" rel="stylesheet' %}">
+	<link href="{% static 'assets/css/util.css" rel="stylesheet' %}">
+
+
+
 	<!-- Template Main CSS File -->
 	<link href="{% static 'assets/css/style.css" rel="stylesheet' %}">
 	<style>
@@ -65,13 +74,14 @@
 					<li><a class="nav-link scrollto" href="index#departments">Departments</a></li>
 					<li><a class="nav-link scrollto" href="index#doctors">Doctors</a></li>
 					<li><a class="nav-link scrollto" href="index#contact">Contact</a></li>
-					<li><a class="nav-link scrollto" href="index#members">Sign In</a></li>
+					<li><a class="nav-link scrollto" href="index#members">Members</a></li>
+					<li><a class="nav-link scrollto" href="admin-login">Admin</a></li>
 				</ul>
 				<i class="bi bi-list mobile-nav-toggle"></i>
 			</nav><!-- .navbar -->
 
 			<a href="#appointment" class="appointment-btn scrollto"><span class="d-none d-md-inline"></span> Appointment</a>
-			<a href="dashboard" class="appointment-btn scrollto"><span class="d-none d-md-inline"></span> Dashboard</a>
+			
 
 		</div>
 	</header><!-- End Header -->
@@ -215,45 +225,11 @@
 
 				<div class="row section-title">
 		 <p>
-		<button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapsSignIn" aria-expanded="false" aria-controls="collapseExample">
-		Sign-In
-		</button>
 		<button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseRegister" aria-expanded="false" aria-controls="collapseExample">
-		Register
+		Add a Doctor
 		</button>
 	</p>
-<div class="collapse" id="collapsSignIn">
-	<div class="card card-body">
-		<section id="members" class="appointment section-bg">
-			<div class="container">
 
-				<div class="section-title">
-					<h2>Doctor's Login</h2>
-				</div>
-
-				<form action="forms/appointment.php" method="post" role="form" class="php-email-form">
-					<div class="row">
-						<div class="col-center">
-							<input type="text" name="name" class="form-control" id="name" placeholder="Name" data-rule="minlen:4" data-msg="Please enter at least 4 chars">
-							<div class="validate"></div>
-						</div>
-						
-						
-					</div>
-					<div class="row">
-						<div class="col-center form-group mt-3">
-							<input type="password" name="date" class="form-control" id="date" placeholder="Password" data-rule="minlen:4" data-msg="Please enter at least 6 chars">
-							<div class="validate"></div>
-						</div>
-					</div>
-			<br>
-					<div class="text-center col-md"><button type="submit">Sign-In</button></div>
-				</form>
-
-			</div>
-		</section>
-	</div>
-</div>
 <div class="collapse" id="collapseRegister">
 	<div class="card card-body">
 		
@@ -268,23 +244,23 @@
 				<form action="" method="POST" autocomplete="off"  >
 					{% csrf_token %}
 					<div class="row">
-						<div class="col-md-4 form-group">
+						<div class="form-group">
 							<input type="text" name="Name" id="name" class="form-control" placeholder="Doctor's Name" data-rule="minlen:4" data-msg="Please enter at least 4 chars">
 							
-						</div>
-						<div class="col-md-4 form-group mt-3 mt-md-0">
+						</div><br><br>
+						<div class="form-group">
 							<select name="Gender" id="gender" class="form-select">
                 <option value="">Gender</option>
                 <option value="Male">Male</option>
                 <option value="Female">Female</option>
               </select>
 							
-						</div>
-			<div class="col-md-4 form-group mt-3 mt-md-0">
+						</div><br><br>
+			<div class="form-group">
 							<input type="text" name="Age" id="age" class="form-control" placeholder="Age" data-rule="minlen:2" data-msg="Please enter at least 4 chars">
 							
-						</div>
-						<div class="col-md-4 form-group mt-3 mt-md-0">
+						</div><br><br>
+						<div class="form-group">
 							<input type="password" name="Password" id="password" class="form-control"placeholder="Password" data-rule="minlen:4" data-msg="Please enter at least 4 chars">
 							
 						</div>
@@ -761,6 +737,8 @@
 	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+	<script src="{% static 'assets/js/validate.js' %}"></script>
 
 </body>
 
